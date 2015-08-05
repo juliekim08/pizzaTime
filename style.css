@@ -1,0 +1,91 @@
+body {
+  background-color: #c0c0c0;
+}
+h1 {
+  font-family: 'Bangers', cursive;
+  font-size: 48px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  color: #55bf3b;
+}
+
+span{
+  font-family: 'Bangers', cursive;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 30px;
+}
+
+.pizzaOptions li {
+  font-weight: bold;
+}
+
+.header {
+  background-color: black;
+  color: white;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  margin-bottom: 0;
+}
+
+.banner {
+  background-color: #55bf3b;
+  padding: 20px 0;
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+    border: 2px dashed lightgray;
+}
+
+.directory {
+  background-color:#55bf3b;
+}
+
+.list-title {
+background-color: #008b00;
+color:Black;
+}
+
+li {
+  border-radius:3px 3px 0px 0px;
+  padding: 5px 20px;
+  background-color: #55bf3b;
+  font-color: white;
+}
+
+.city-links li {
+  list-style-type: none;
+  display: inline-block;
+
+}
+
+h3 {
+  border-bottom: 2px solid lightgray;
+  margin-bottom: 10px;
+}
+
+.city-content {
+  width: 640px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+
+/*.visible{
+  height: auto;
+  display: block;
+}
+*/
