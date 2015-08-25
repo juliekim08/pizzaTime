@@ -3,157 +3,58 @@
 <html>
 
 <head>
-    <title>Pizza Time</title>
-    <meta charset="utf-8">
-    <script src="http://code.jquery.com/jquery.min.js"></script>
-    <script src="pizzaTime.js"></script>
-    <link href='style.css' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+  <title>Pizza Time</title>
+  <meta charset="utf-8">
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script src="pizzaTime.js"></script>
+  <link href='style.css' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-    <div class="header">
-      <h1>It's Pizza Time</h1>
-      <div class="banner">
-        <img src="http://static.tumblr.com/6ksvijd/NEFljkd6v/tmnt-pizza.jpg" alt="ninja-turtle">
+<div class="header">
+  <h1>It's Pizza Time</h1>
+  <div class="banner">
+    <img src="http://static.tumblr.com/6ksvijd/NEFljkd6v/tmnt-pizza.jpg" alt="ninja-turtle">
+  </div>
+</div>
+
+<div class="content">
+  <div class="directory">
+    <ul class="city-links">
+      <li class="list-title"><strong>Locations</strong></li>
+      <li><a href="#SanFrancisco">San Francisco</a></li>
+      <li><a href="#Chicago">Chicago</a></li>
+      <li><a href="#NewYork">New York</a></li>
+    </ul>
+  </div>
+  <div class="city-content">
+    <div class="city-content">
+      <div id="default">
+        <h3>Welcome!</h3>
+        <p>We're proud to be the sponsors and favorite pizza of the Teenage Mutant Ninja Turtles. Check out one of our three locations across the nation and see why the Turtles are a fan of our three specialty tradition. Each location offers three specialty pies and their own take of veggies, meat and cheese. Take a roadtrip and collect them all!</p>
+      </div>
+      <div id="city-template" class="hidden">
+        <h2 id="title"> </h2>
+        <h3>Location</h3>
+        <p id="city-detail-location">.</p>
+        <h3>Menu</h3>
+        <div class="container">
+          <form action="#">
+            Pick from One of Our Three Specialty Pies:
+            <select name="" id="pizzaType">
+            </select>
+
+            <h4>Your Pizza of Choice</h4>
+            <span id="pizza-description">
+
+            </span>
+          </form>
+        </div>
       </div>
     </div>
-
-    <div class="content">
-        <div class="directory">
-        <ul class="city-links">
-            <li class="list-title"><strong>Locations</strong></li>
-            <li><a href="#SanFrancisco">San Francisco</a></li>
-            <li><a href="#Chicago">Chicago</a></li>
-            <li><a href="#NewYork">New York</a></li>
-        </ul>
-        </div>
-        <div class="city-content">
-            <div class="city-content">
-            <div id="default">
-             <h3>Welcome!</h3>
-             <p>We're proud to be the sponsors and favorite pizza of the Teenage Mutant Ninja Turtles. Check out one of our three locations across the nation and see why the Turtles are a fan of our three specialty tradition. Each location offers three specialty pies and their own take of veggies, meat and cheese. Take a roadtrip and collect them all!</p>
-            </div>
-            <div id="SanFrancisco" class="hidden">
-                <h2> Michaelangeo's Says</h2>
-                <p><small>Proud to be part of the <span>It's Pizza Time<span> Family, San Francisco style!</small></p>
-                <h3>About</h3>
-                <p>Michaelangelo says more than "Cowabunga, dudes" through pizza. Home of the sourdough crust while staying true to the <span>It's Pizza Time</span> three specialty pizza tradition! </p>
-                <h3>Location</h3>
-                <p>Located in the heart of the Mission.</p>
-                <img src="" alt="" />
-                <h3>Menu</h3>
-                    <div class="container">
-                        <form action="#">
-                            Pick from One of Our Three Specialty Pies:
-                            <select name="" id="pizzaType">
-                <!--                             <option value="pizza1">pizza1</option>
-                                <option value="pizza2">2</option>
-                                <option value="pizza3">3</option> -->
-                            </select>
-
-                    <h4>Your Pizza of Choice</h4>
-                    <p>Meatballs on Meatballs on More Meatballs<p/>
-                    <p>Toppings: Pepperoni Meatball, Chorizo Meatball, Turkey Meatball</p>
-                    <!-- <li>You Don't Make Friends with Salad</li>
-                    <p>Toppings: Mushrooms</p>
-                    <li>More Cheese Please</li>
-                    <p>Toppings: Mozaraella, Asiago, Pepperjack, Cheddar, Goat Cheese, Prolone </p> -->
-                  </ol>
-
-                <h3>Order Online!(Coming Soon!)</h3>
-
-                        <script>
-                          var pizzaOptions = {"SanFrancisco":[
-                            {
-                              name: 'Meatballs on Meatballs on More Meatballs',
-                              toppings: 'Pepperoni Meatball, Chorizo Meatball, Turkey Meatball'
-                            },
-                            {
-                              name: 'You Don\'t Make Friends with Salad',
-                              toppings: 'Mushrooms'
-                            },
-                            {
-                              name: 'More Cheese Please',
-                              toppings: 'Mozaraella, Asiago, Pepperjack, Cheddar, Goat Cheese, Prolone'
-                            }
-                          ],
-                          "Chicago" : [],
-                          "NewYork" : []
-                          };
-
-                          var pos = pizzaOptions[window.location.hash.substring(1)];
-                          for (var i = 0; i < pos.length; i++){
-                            $('#pizzaType').append('<option value="' + i + '">' + pos[i]['name']+'</option>');
-                          }
-
-                        </script>
-                    </form>
-                </div>
-            </div>
-            <div id="Chicago" class="hidden">
-                <h2> Leonardo's Pizza Loft!</h2>
-                      <p><small>Proud to be part of the<span>It's Pizza Time<span> Family, Chicago style!</small></p>
-                <h3>About</h3>
-                <p>Leonardo's the first of the <span>It's Pizza Time<span> locations where Leonardo introduced his favorite pretzel deep dish crust. </p>
-                <h3>Location </h3>
-                <p>Located in Roscoe Village on Damen and School.</p>
-                <img src="" alt="" />
-                <h3>Menu</h3>
-                  <ol class="pizzaOptions">
-                    <li>L Meat Pizza</li>
-                    <p>Toppings: Pepperoni Meatball, Chorizo Meatball, Turkey Meatball</p>
-                    <li>You Don't Make Friends with Salad</li>
-                    <p>Toppings: Mushrooms</p>
-                    <li>More Cheese Please</li>
-                    <p>Toppings: Mozaraella, Asiago, Pepperjack, Cheddar, Goat Cheese, Prolone </p>
-                  </ol>
-
-                <h3>Order Online!(Coming Soon!)</h3>
-                <div class="container">
-                    <form action="#">
-                        Choose your pie:
-                        <select name="" id="pizzaType">
-                            <option value="pizza1">pizza1</option>
-                            <option value="pizza2">2</option>
-                            <option value="pizza3">3</option>
-                        </select>
-                    </form>
-                </div>
-            </div>
-            <div id="NewYork" class="hidden">
-                <h2> Welcome to NYC!</h2>
-                      <p><small>Proud to be part of the<span>It's Pizza Time<span> Family, San Francisco style!<</small></p>
-                <h3>About</h3>
-                <p>Michaelangelo says more than "Cowabunga, dudes" through pizza. Home of the sourdough crust while staying true to the <span>It's Pizza Time<span> three specialty pizza tradition! </p>
-                <h3>Location</h3>
-                <p>Located in the heart of the Mission.</p>
-                <img src="" alt="" />
-                <h3>Menu</h3>
-                  <ol class="pizzaOptions">
-                    <li>Meatballs on Meatballs on More Meatballs</li>
-                    <p>Toppings: Pepperoni Meatball, Chorizo Meatball, Turkey Meatball</p>
-                    <li>You Don't Make Friends with Salad</li>
-                    <p>Toppings: Mushrooms</p>
-                    <li>More Cheese Please</li>
-                    <p>Toppings: Mozaraella, Asiago, Pepperjack, Cheddar, Goat Cheese, Prolone </p>
-                  </ol>
-
-                <h3>Order Online!(Coming Soon!)</h3>
-                <div class="container">
-                    <form action="#">
-                        Choose your pie:
-                        <select name="" id="pizzaType">
-                            <option value="pizza1">pizza1</option>
-                            <option value="pizza2">2</option>
-                            <option value="pizza3">3</option>
-                        </select>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+  </div>
 
 
 
